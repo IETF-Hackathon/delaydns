@@ -37,4 +37,4 @@ Building
 Running
 -------
 
-    delaydns [ @<target ns IP> ... ] <listening IP>
+    delaydns [ @<IP of DNS to proxy> ... ] [ <listen IP> ... ]

@@ -187,8 +187,7 @@ int main(int argc, const char **argv)
 		argv++;
 	}
 	if (r || n_listeners < 1 || n_upstreams < 1)
-		fprintf(stderr,"usage: %s [ @<authoritative IP> ... ] \\"
-			       "          [ <listen IP> ... ]\n", *argv);
+		fprintf(stderr,"usage: %s [ @<IP of DNS to proxy> ... ] [ <listen IP> ... ]\n", *argv);
 
 	/* Configure getdns context */
 	else if (! r
