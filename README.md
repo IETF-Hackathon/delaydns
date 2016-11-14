@@ -1,5 +1,5 @@
-`deleydns`
-==========
+delaydns
+========
 
 Overview
 --------
