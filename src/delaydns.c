@@ -100,8 +100,8 @@ void response_cb(getdns_context *context, getdns_callback_type_t callback_type,
 	&& (( trans->delay > 0 
 	   && !getdns_context_get_eventloop(context, &trans->loop)
 	   && !trans->loop->vmt->schedule(trans->loop, -1, trans->delay, &trans->ev)
-	    ) || getdns_reply(context, response, trans->request_id)
-	      || getdns_reply(context, NULL, trans->request_id)))
+	    ) || !getdns_reply(context, response, trans->request_id)
+	      || !getdns_reply(context, NULL, trans->request_id)))
 		return;
 	
 	fatal_cleanup(trans);
